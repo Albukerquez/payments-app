@@ -1,16 +1,12 @@
-<h2>Publications</h2>
+<h2>Публикации</h2>
 
 <% @publications.each do |publication| %>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title"><%= publication.title %></h3>
-    </div>
-    <div class="panel-body">
-      <p><%= publication.description %></p>
-      <p><%= publication.file_url %></p>
-    </div>
-    <div class="panel-footer">
-      <%= link_to "View more details", publication_path(publication), class: "btn btn-default" %>
-    </div>
+<div class="card" style="width: 20rem;">
+  <div class="card-block">
+    <h4 class="card-title"><%= publication.title %></h4>
+    <p class="card-text"><%= publication.description %></p>
+    <p class="card-text"><%= publication.file_url %></p>
+    <%= link_to 'Детали', publication_path(publication), class: "btn btn-primary" %>
   </div>
+</div>
 <% end %>

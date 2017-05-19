@@ -1,21 +1,23 @@
-<h2>Publications</h2>
-
-<div>
-<%= link_to "New publication", new_admin_publication_path, class: 'btn btn-primary' %>
+<h2 class="text-center">Публикации</h2>
+<br>
+<div class="text-center">
+  <%= link_to "Новая публикация", new_admin_publication_path, class: 'btn btn-success text-center' %>
 </div>
-
-<% @publications.each do |publication| %>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title"><%= publication.title %></h3>
-    </div>
-    <div class="panel-body">
-      <p><%= publication.description %></p>
-      <p><%= publication.file_url %></p>
-    </div>
-    <div class="panel-footer">
-      <%= link_to "View more details", admin_publication_path(publication), class: "btn btn-default" %>
-      <%= link_to "Edit", edit_admin_publication_path(publication), class: "btn btn-default" %>
-    </div>
+<br>
+<div class="container-fluid">
+  <div class="row">
+  <% @publications.each do |publication| %>
+  <div class="card" style="width: 20rem;">
+      <h4 class="card-header"><%= publication.title %></h4>
+      <div class="card-block">
+        <p class="card-text"><%= publication.description %></p>
+        <p class="card-text"><%= publication.file_url %></p>
+      </div>
+      <div class="card-block">
+        <%= link_to "Детали", admin_publication_path(publication), class: "btn btn-info" %>
+        <%= link_to "Редактировать", edit_admin_publication_path(publication), class: "btn btn-warning" %>
+      </div>
   </div>
-<% end %>
+  <% end %>
+  </div>
+</div>
