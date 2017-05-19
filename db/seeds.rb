@@ -8,5 +8,6 @@
 
 User.create(
   email: 'foo@bar.com',
-  password: 'foobar'
+  password: 'foobar',
+  is_admin: true
 )

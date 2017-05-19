@@ -1,3 +1,4 @@
 # README
 ### payment application
-* in development right now
+### to do ###
+** fix layout of publications
