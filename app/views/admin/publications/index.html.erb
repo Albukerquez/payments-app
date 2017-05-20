@@ -4,11 +4,10 @@
   <%= link_to "Новая публикация", new_admin_publication_path, class: 'btn btn-success text-center' %>
 </div>
 <br>
-<div class="container-fluid">
-  <div class="row">
+<div class="row justify-content-md-center">
   <% @publications.each do |publication| %>
   <div class="card" style="width: 20rem;">
-      <h4 class="card-header"><%= publication.title %></h4>
+      <h4 class="card-header text-center"><%= publication.title %></h4>
       <div class="card-block">
         <p class="card-text"><%= publication.description %></p>
         <p class="card-text"><%= publication.file_url %></p>
@@ -19,5 +18,4 @@
       </div>
   </div>
   <% end %>
-  </div>
 </div>
