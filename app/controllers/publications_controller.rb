@@ -1,6 +1,6 @@
 class PublicationsController < ApplicationController
   def index
-    @publication = Publication.all
+    @publications = Publication.all
   end
 
   def show
