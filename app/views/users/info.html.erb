@@ -1,0 +1,6 @@
+<h3>Аккаунт <%= current_user.email %></h3>
+<% if @subscription.active %>
+подписан
+<% else %>
+<%= render 'form' %>
+<% end %>

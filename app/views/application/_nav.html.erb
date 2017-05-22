@@ -8,7 +8,7 @@
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <a class="nav-link", href="">Вы вошли как <%= current_user.email %></a>
+              <%= link_to current_user.email, users_info_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
               <%= link_to 'Посты', admin_publications_path, class: "nav-link" %>
