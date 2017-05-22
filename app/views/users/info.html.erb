@@ -1,6 +1,7 @@
 <h3>Аккаунт <%= current_user.email %></h3>
 <% if @subscription.active %>
-подписан
+  <h3>Текущий план возобновится: <%= Time.at(@stripe_subscription["current_period_end"]).strftime("%D") %></h3>
+  <%= link_to 'Отменить Подписку', users_cancel_subscription_path %>
 <% else %>
-<%= render 'form' %>
+  <%= render 'form' %>
 <% end %>
