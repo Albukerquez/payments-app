@@ -1,4 +1,5 @@
 class PublicationsController < ApplicationController
+  before_action :logged_in_user, only: :show
   before_action :check_for_subscription, only: :show
   def index
     @publications = Publication.all
